@@ -26,3 +26,14 @@ with open("publishers.json", "w") as f:
 
 with open("developers.json", "w") as f:
     f.write(json.dumps(make_output(developer), indent=4))
+
+with open("names.json", "w") as f:
+    f.write(
+        json.dumps(
+            {
+                "publishers": list(publisher.keys()),
+                "developers": list(developer.keys()),
+            },
+            indent=4,
+        )
+    )
